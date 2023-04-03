@@ -1,0 +1,62 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <!-- 插件唯一 id，不能和其他插件项目重复，所以推荐使用 com.xxx.xxx 的格式插件不同版本之间不能更改，若没有指定，则与插件名称相同 -->
+    <id>com.wj.flutter.template</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <!-- 插件名称，别人在官方插件库搜索你的插件时使用的名称 -->
+    <name>Flutter Template</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <!-- 供应商主页和email（不能使用默认值，必须修改成自己的）-->
+    <vendor email="1023835092@qq.com" url="https://github.com/GodJiong">wj</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <!-- 插件的描述，支持 HTML 标签；不能使用默认值，必须修改成自己的。并且需要大于 40 个字符 -->
+    <description><![CDATA[
+        Flutter plugin for Intellij IDEA and Android Studio，help you add Live Templates to your IDE saving time writing the boilerplate in Flutter.
+        <br/>For full details of the available snippets, please <a href="https://github.com/GodJiong/Flutter-Template/blob/main/README.md">visit here</a>
+        ]]></description>
+    <!-- 以上信息会被抽取至插件市场主页展示 -->
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <!-- 插件所依赖的其他插件的 id -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>org.jetbrains.android</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <!-- 声明该插件对 IDEA core 或其他插件的扩展 -->
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- 2020.3 及以后的版本，注册通知服务 -->
+        <!--<notificationGroup id="Custom Notification Group" displayType="BALLOON" key="notification.group.name"/>-->
+        <!-- Add your extensions here -->
+        <!-- displayType只有这四种类型, id 在一个插件内不能重复,isLogByDefault表示是否在 Event Log 中记录 -->
+        <notificationGroup displayType="BALLOON" id="power_command.notification.balloon" isLogByDefault="true"/>
+        <notificationGroup displayType="STICKY_BALLOON" id="power_command.notification.sticky.balloon"/>
+        <defaultLiveTemplates file="/liveTemplates/Flutter.xml"/>
+        <liveTemplateContext implementation="FlutterContext"/>
+    </extensions>
+    <!-- 编写插件动作 -->
+    <!--    <actions>-->
+    <!--        <group id="PowerCommand" class="com.wj.powercommand.base.BaseGroup" text="Power Command" popup="true">-->
+    <!--            <add-to-group group-id="ToolsMenu" anchor="first"/>-->
+    <!--            <action id="power_command.SourceBuildAction" class="com.wj.powercommand.SourceBuildAction"-->
+    <!--                    text="Source Build"-->
+    <!--                    description="Source build">-->
+    <!--                <keyboard-shortcut keymap="$default" first-keystroke="meta B"/>-->
+    <!--            </action>-->
+    <!--            <action id="power_command.SourceRestoreAction" class="com.wj.powercommand.SourceRestoreAction"-->
+    <!--                    text="Source Restore"-->
+    <!--                    description="Source restore">-->
+    <!--                <keyboard-shortcut keymap="$default" first-keystroke="meta R"/>-->
+    <!--            </action>-->
+    <!--        </group>-->
+    <!--    </actions>-->
+</idea-plugin>
