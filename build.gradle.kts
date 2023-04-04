@@ -50,6 +50,7 @@ tasks {
     }
 
     // System.getenv()从系统环境变量里获取值，{@link https://blog.csdn.net/zhulier1124/article/details/107616885}
+    // 签名：https://plugins.jetbrains.com/docs/intellij/plugin-signing.html
     signPlugin {
         certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
         privateKey.set(System.getenv("PRIVATE_KEY"))
