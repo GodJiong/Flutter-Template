@@ -1,5 +1,8 @@
 # Flutter-Template
 
+[![Version](https://img.shields.io/jetbrains/plugin/v/21405.svg)](https://plugins.jetbrains.com/plugin/21405)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/21405.svg)](https://plugins.jetbrains.com/plugin/21405)
+
 Flutter plugin for Intellij IDEA and Android Studio，help you add Live Templates to your IDE saving time writing the
 boilerplate in Flutter.
 
