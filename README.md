@@ -15,8 +15,7 @@ IntelliJ based: since-build:
 
 - Using IDE built-in plugin system:
 
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Flutter snippet for
-  generator tool"</kbd> >
+  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Flutter Template"</kbd> >
   <kbd>Install Plugin</kbd>
 
 - Manually:
